@@ -1,0 +1,92 @@
+@import "../../assets/styles/global.scss";
+
+.header {
+  padding: 24px 0;
+  background: rgb(0, 106, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 106, 255, 1) 0%,
+    rgba(9, 90, 205, 1) 100%
+  );
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    @include FontStyles(600, 36px, 43px, $lightColor);
+  }
+
+  & form {
+    width: 100%;
+    max-width: 304px;
+  }
+
+  &-search {
+    padding: 0 15px;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+
+    & > input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
+
+    & > input,
+    & > input::placeholder {
+      @include FontStyles(400, 14px, 17px, $lightColor);
+    }
+
+    & > button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      & > svg {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+        color: $lightColor;
+      }
+    }
+  }
+
+  &-aboutus {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    & > a {
+      @include FontStyles(400, 18px, 21px, $lightColor);
+    }
+  }
+
+  &-giveAcc {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fe8b37;
+
+    & > svg {
+      width: 20px;
+      height: 20px;
+      color: $lightColor;
+    }
+
+    & > span {
+      @include FontStyles(600, 18px, 21px, $lightColor);
+    }
+  }
+}
