@@ -1,0 +1,57 @@
+@import "../../assets/styles/global.scss";
+
+.footer {
+  padding: 40px 0 33px;
+  background: rgb(0, 106, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 106, 255, 1) 0%,
+    rgba(9, 90, 205, 1) 100%
+  );
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    margin-right: 10%;
+    @include FontStyles(600, 30px, 36px, $lightColor);
+  }
+
+  &-questions {
+    display: flex;
+    align-items: center;
+    gap: 77px;
+
+    & > a {
+      @include FontStyles(500, 18px, 21px, $lightColor);
+    }
+  }
+
+  &-tel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & > svg {
+      width: 20px;
+      height: 20px;
+      color: $lightColor;
+    }
+    & > span {
+      @include FontStyles(400, 18px, 21px, $lightColor);
+    }
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    & svg {
+      width: 20px;
+      height: 20px;
+      color: $lightColor;
+    }
+  }
+}
