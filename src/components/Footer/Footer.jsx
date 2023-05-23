@@ -7,7 +7,7 @@ import { TbBrandTelegram } from "react-icons/tb";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="container">
         <Link className="footer-logo" to={"/"}>
           Pressa
@@ -32,6 +32,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

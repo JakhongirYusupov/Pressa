@@ -1,5 +1,58 @@
+@import "../../assets/styles/global.scss";
 .home {
+  & > .container {
+    padding: 200px 0 130px;
+  }
+
+  &-title {
+    @include FontStyles(500, 24px, 29px, $blackColor);
+  }
+
   &-cardList {
-    padding: 100px 0;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 70px;
+
+    &-seeMore {
+      margin-top: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > button {
+        padding: 15px 20px;
+        background: $customBlue;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        @include FontStyles(400, 18px, 21px, $lightColor);
+      }
+    }
+  }
+
+  &-info {
+    padding-top: 236px;
+    display: flex;
+    gap: 30px;
+
+    &-item {
+      position: relative;
+      padding: 70px 30px 80px;
+      width: 100%;
+      background: #055bd3;
+      border-radius: 5px;
+      &-desc {
+        max-width: 310px;
+        @include FontStyles(600, 36px, 50px, $lightColor);
+      }
+
+      &-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
   }
 }

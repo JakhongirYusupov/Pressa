@@ -8,7 +8,7 @@ export default function Header() {
   };
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="container">
         <Link to={"/"} className="header-logo">
           Pressa
@@ -36,6 +36,6 @@ export default function Header() {
           <span>E’lon berish</span>
         </Link>
       </div>
-    </div>
+    </header>
   );
 }

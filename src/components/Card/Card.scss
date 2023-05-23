@@ -1,0 +1,46 @@
+@import "../../assets/styles/global.scss";
+
+.card {
+  background: $lightColor;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  &-img {
+    width: 100%;
+    min-height: 417px;
+    object-fit: cover;
+  }
+
+  &-main {
+    padding: 20px 30px 56px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-top: none;
+
+    &-title {
+      @include FontStyles(600, 24px, 34px, $greyColor);
+    }
+
+    &-desc {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      &-list {
+        display: grid;
+        gap: 20px;
+        &-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          & > span {
+            @include FontStyles(500, 18px, 21px, $greyColor);
+          }
+          & > svg {
+            width: 22px;
+            height: 22px;
+            color: $customBlue;
+          }
+        }
+      }
+    }
+  }
+}
