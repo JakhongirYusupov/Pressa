@@ -1,0 +1,83 @@
+@import "../../assets/styles/global.scss";
+
+.login {
+  padding: 60px 0;
+  height: 100vh;
+
+  .container {
+    height: 100%;
+  }
+
+  &-logo {
+    @include FontStyles(500, 36px, 43px, $customBlue);
+  }
+
+  &-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-main {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-title {
+      margin-bottom: 40px;
+      @include FontStyles(500, 48px, 56px, #222222);
+    }
+    &-forgetPassword {
+      text-align: end;
+      @include FontStyles(400, 16px, 19px, $blackColor);
+    }
+
+    & > label {
+      padding: 0 20px;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(15, 24, 38, 0.2);
+      border-radius: 4px;
+
+      & > svg {
+        width: 20px;
+        height: 20px;
+        color: #222222;
+      }
+
+      & > input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        text-indent: 10px;
+        background-color: $lightColor !important;
+        outline: none;
+        @include FontStyles(400, 18px, 21px, $blackColor);
+      }
+      & > input::placeholder {
+        opacity: 0.5;
+      }
+
+      input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 300px $lightColor inset !important;
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+
+      & > button {
+        padding: 16px 50px;
+        background: $customBlue;
+        border-radius: 4px;
+        border: none;
+        @include FontStyles(400, 24px, 40px, $lightColor);
+        cursor: pointer;
+      }
+    }
+  }
+}

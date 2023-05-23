@@ -13,8 +13,8 @@ export default function Home() {
         <h3 className="home-title">Oxirgi e’lonlar</h3>
         <section className="home-cardList">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((el) => (
-            <Link>
-              <Card key={el} />
+            <Link to={"/detail/" + el} key={el}>
+              <Card />
             </Link>
           ))}
         </section>

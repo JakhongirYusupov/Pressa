@@ -1,13 +1,14 @@
-import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { useLocation } from "react-router-dom";
 
 export default function Layout({ children }) {
+  const { pathname } = useLocation();
   return (
     <>
-      <Header />
+      {pathname !== "/admin" ? <Header /> : null}
       {children}
-      <Footer />
+      {pathname !== "/admin" ? <Footer /> : null}
     </>
   );
 }
