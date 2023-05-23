@@ -1,0 +1,140 @@
+@import "../../assets/styles/global.scss";
+
+.hero {
+  padding: 90px 0 140px;
+  background: rgb(0, 106, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 106, 255, 1) 0%,
+    rgba(9, 90, 205, 1) 100%
+  );
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+    @include FontStyles(600, 64px, 79px, $lightColor);
+  }
+
+  &-filter {
+    width: calc(100% - 80px);
+    position: absolute;
+    bottom: -190px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    &-item {
+      width: 100%;
+      height: 100px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-right: 1px solid #33333322;
+
+      &-wrapper {
+        cursor: pointer;
+      }
+
+      & > input {
+        width: 100%;
+        max-width: 210px;
+        height: 50px;
+        outline: none;
+        border: none;
+      }
+
+      & > span,
+      & > input {
+        @include FontStyles(500, 20px, 24px, $greyColor);
+      }
+
+      & > svg {
+        width: 24px;
+        height: 24px;
+        color: $customBlue;
+      }
+
+      & > svg:last-child {
+        color: $greyColor;
+      }
+    }
+
+    &-button {
+      width: 50%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: $customBlue;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      @include FontStyles(500, 20px, 24px, $lightColor);
+      cursor: pointer;
+    }
+  }
+}
+
+.filterGrid {
+  position: absolute;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 160px);
+  gap: 30px;
+  left: 0;
+  top: 110px;
+  background: $lightColor;
+  box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+
+  &-item {
+    z-index: 10;
+    &-title {
+      margin-bottom: 10px;
+      @include FontStyles(500, 18px, 21px, $blackColor);
+    }
+
+    &-list {
+      display: grid;
+      gap: 16px;
+      &-el {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & > input {
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+        & > span {
+          align-items: center;
+          text-align: center;
+          white-space: nowrap;
+          @include FontStyles(400, 16px, 19px, $blackColor);
+        }
+        & > svg {
+          width: 24px;
+          height: 24px;
+          color: $customBlue;
+        }
+      }
+    }
+  }
+}
+
+.filter-set {
+  max-width: 256px;
+}
