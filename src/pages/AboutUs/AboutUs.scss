@@ -1,0 +1,15 @@
+@import "../../assets/styles/global.scss";
+
+.about {
+  padding-bottom: 190px;
+
+  &-title {
+    margin: 20px 0 40px;
+    @include FontStyles(600, 40px, 48px, $greyColor);
+  }
+
+  & p {
+    max-width: 960px;
+    @include FontStyles(400, 24px, 40px, $greyColor);
+  }
+}
