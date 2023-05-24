@@ -10,6 +10,7 @@ import {
   FiYoutube,
 } from "react-icons/fi";
 import { TbBrandTelegram, TbBrandTumblr } from "react-icons/tb";
+import { GoCommentDiscussion } from "react-icons/go";
 import img from "../../assets/images/default.png";
 import {
   FacebookShareButton,
@@ -17,9 +18,15 @@ import {
   TumblrShareButton,
   TwitterShareButton,
 } from "react-share";
+import DetailSwiper from "../../components/DetailSwiper/DetailSwiper";
 
 export default function Detail() {
   const url = window.location.href;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="detail">
       <div className="container">
@@ -116,9 +123,62 @@ export default function Detail() {
                 <span>14:00</span>
               </div>
             </div>
+            <div className="detail-main-comments">
+              <div className="detail-main-comments-title">
+                <GoCommentDiscussion />
+                <span>Izohlar</span>
+              </div>
+              <form
+                className="detail-main-comments-form"
+                onSubmit={handleSubmit}
+              >
+                <img
+                  src={img}
+                  alt="error"
+                  className="detail-main-comments-form-img"
+                />
+                <div className="detail-main-comments-form-input">
+                  <textarea
+                    name=""
+                    cols="50"
+                    rows="10"
+                    placeholder="Izoh yozing..."
+                  ></textarea>
+                  <div className="detail-main-comments-form-input-button">
+                    <button type="submit">Yuborish</button>
+                  </div>
+                </div>
+              </form>
+              <ul className="detail-main-comments-list">
+                <li className="detail-main-comments-list-item">
+                  <img src={img} alt="error" />
+                  <div className="detail-main-comments-list-item-desc">
+                    <h4>Abella</h4>
+                    <span>Bugun 15:00</span>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam etiam at nunc tempor ac.
+                    </p>
+                  </div>
+                </li>
+                <li className="detail-main-comments-list-item detail-main-comments-list-owncomment">
+                  <img src={img} alt="error" />
+                  <div className="detail-main-comments-list-item-desc">
+                    <h4>Abella</h4>
+                    <span>Bugun 15:00</span>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam etiam at nunc tempor ac.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <p className="detail-main-comments-seeMore">Ko’proq ko’rish...</p>
+            </div>
           </div>
         </div>
       </div>
+      <DetailSwiper />
     </div>
   );
 }

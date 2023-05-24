@@ -1,0 +1,49 @@
+@import "../../assets/styles/global.scss";
+
+.swiper {
+  & > .container {
+    padding-top: 160px;
+    padding-right: 0;
+  }
+
+  &-title {
+    margin-bottom: 50px;
+    @include FontStyles(500, 24px, 29px, $blackColor);
+  }
+
+  &-list {
+    .card {
+      height: 692px;
+      &-main {
+        padding: 20px 10px;
+      }
+    }
+  }
+
+  &-slideButtons {
+    padding: 20px 40px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+
+    .slider_controls__left,
+    .slider_controls__right {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      & > svg {
+        width: 34px;
+        height: 34px;
+        color: $customBlue;
+      }
+    }
+  }
+}
