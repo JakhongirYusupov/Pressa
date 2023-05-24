@@ -1,0 +1,211 @@
+@import "../../assets/styles/global.scss";
+
+.give {
+  padding-bottom: 128px;
+  &-title {
+    margin-bottom: 37px;
+    @include FontStyles(500, 24px, 29px, $blackColor);
+  }
+
+  &-wrapper {
+    width: 100%;
+    max-width: 735px;
+    margin: 0 auto;
+  }
+
+  &-form {
+    display: grid;
+    gap: 50px;
+    &-title {
+      @include FontStyles(500, 18px, 21px, $blackColor);
+    }
+
+    &-person {
+      display: grid;
+      gap: 20px;
+      &-radioBtn {
+        margin-left: 50px;
+        display: flex;
+        gap: 50px;
+        & > label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          & > span {
+            @include FontStyles(500, 14px, 17px, $greyColor);
+          }
+          & > input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &-item {
+      padding: 40px 35px 30px;
+      display: grid;
+      gap: 30px;
+      background: $lightColor;
+      border: 1px solid rgba(51, 51, 51, 0.1);
+      border-radius: 2px;
+
+      &-textarea {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & > span {
+          @include FontStyles(400, 12px, 14px, $greyColor);
+        }
+        & > textarea {
+          width: 100%;
+          padding: 16px;
+          background-color: #3333331f;
+          border: none;
+          border-radius: 3px;
+          outline: none;
+          @include FontStyles(400, 14px, 17px, $greyColor);
+          resize: none;
+        }
+      }
+
+      &-uploadBox {
+        display: flex;
+        gap: 50px;
+      }
+
+      &-uploaded {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        &-desc {
+          @include FontStyles(400, 12px, 19px, $customBlue);
+        }
+        & > p {
+          @include FontStyles(400, 16px, 19px, $greyColor);
+        }
+        & > span {
+          opacity: 0.4;
+          @include FontStyles(400, 12px, 14px, $greyColor);
+        }
+      }
+
+      &-upload {
+        width: fit-content;
+        padding: 16px 34px;
+        background: $customBlue;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        & > span {
+          white-space: nowrap;
+          @include FontStyles(400, 14px, 17px, $lightColor);
+        }
+        & > svg {
+          width: 20px;
+          height: 20px;
+          color: $lightColor;
+        }
+        & > input {
+          display: none;
+        }
+      }
+
+      &-title {
+        & > input {
+          margin: 25px 0;
+          width: 100%;
+          height: 42px;
+          border: none;
+          outline: none;
+          text-transform: uppercase;
+          @include FontStyles(500, 32px, 42px, $greyColor);
+          &::placeholder {
+            opacity: 0.2;
+          }
+        }
+      }
+
+      &-desc {
+        width: 100% !important;
+      }
+
+      &-time {
+        width: 100% !important;
+        flex-direction: row !important;
+        & > input:first-child {
+          width: 171px !important;
+        }
+        & > input:last-child {
+          width: 140px !important;
+        }
+      }
+
+      &-box {
+        display: flex;
+        gap: 30px;
+      }
+
+      &-label {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & > span {
+          @include FontStyles(400, 12px, 14px, $greyColor);
+        }
+        & > input,
+        & > select {
+          width: 100%;
+          padding: 16px;
+          background-color: #3333331f;
+          border: none;
+          border-radius: 3px;
+          outline: none;
+          @include FontStyles(400, 14px, 17px, $greyColor);
+        }
+
+        &-online {
+          display: flex;
+          & > div {
+            width: 50%;
+            height: 50px;
+            background-color: $customBlue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include FontStyles(400, 14px, 17px, $greyColor);
+            cursor: pointer;
+          }
+        }
+      }
+
+      &-btns {
+        display: flex;
+        gap: 15px;
+
+        &-submit,
+        &-close {
+          padding: 16px 44px;
+          background: #ffffff;
+          opacity: 0.4;
+          border: 1px solid #b2bbc8;
+          border-radius: 3px;
+          @include FontStyles(400, 14px, 17px, #b2bbc8);
+          cursor: pointer;
+        }
+        &-submit {
+          opacity: 1;
+          background-color: $customBlue;
+          color: $lightColor;
+          border-color: $customBlue;
+        }
+      }
+    }
+  }
+}
