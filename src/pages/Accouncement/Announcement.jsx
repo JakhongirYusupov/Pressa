@@ -2,14 +2,18 @@ import { useRef, useState } from "react";
 import HeroUrl from "../../components/HeroUrl/HeroUrl";
 import "./Announcement.scss";
 import { AiOutlineCloudUpload } from "react-icons/ai";
+import PopUpBox from "../../components/PopUpBox/PopUpBox";
 
 export default function Announcement() {
   const [online, setonline] = useState(true);
   const [legalPerson, setlegalPerson] = useState(false);
+  const [activePopUp, setactivePopUp] = useState(false);
+
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setactivePopUp(true);
   };
 
   const close = () => {
@@ -18,6 +22,7 @@ export default function Announcement() {
 
   return (
     <div className="give">
+      {activePopUp ? <PopUpBox setactivePopUp={setactivePopUp} /> : null}
       <div className="container">
         <HeroUrl title={"E’lon berish"} />
         <div className="give-wrapper">
